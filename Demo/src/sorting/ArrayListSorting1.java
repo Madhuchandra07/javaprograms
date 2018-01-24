@@ -1,0 +1,29 @@
+package sorting;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ArrayListSorting1 {
+	public static void main(String args[]){
+		   ArrayList<Student1> arraylist = new ArrayList<Student1>();
+		   arraylist.add(new Student1(101, "Zues", 26));
+		   arraylist.add(new Student1(505, "Abey", 24));
+		   arraylist.add(new Student1(809, "Vignesh", 32));
+
+		   /*Sorting based on Student Name*/
+		   System.out.println("Student Name Sorting:");
+		   Collections.sort(arraylist, Student1.StuNameComparator);
+
+		   for(Student1 str: arraylist){
+				System.out.println(str);
+		   }
+
+		   /* Sorting on Rollno property*/
+		   System.out.println("RollNum Sorting:");
+		   Collections.sort(arraylist, Student1.StuRollno);
+		   for(Student1 str: arraylist){
+				System.out.println(str);
+		   }
+		}
+	
+}
